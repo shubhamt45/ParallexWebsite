@@ -1,0 +1,101 @@
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+#wrapper{
+    height: 100vh;
+    overflow-x: hidden;/*here i dont want to scroll in the horizontal direction*/
+    overflow-y: auto;/*here i  want to scroll in the vertical direction*/
+    perspective: 10px;
+}
+
+.container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    transform-style:preserve-3d;
+   z-index: -1;  /*these line mean for overlapping */
+
+}
+
+.background{
+    transform: translateZ(-40px) scale(5);
+}
+
+.foreground{
+    transform: translateZ(-20px) scale(3) ;
+}
+
+.background,.foreground{
+     position: absolute; /*tya dusrya image chy perspective madhe image la overlapp karayla madat karta */
+     height: 100%;
+     width: 100%;
+     z-index: -1;
+     object-fit: cover;
+}
+
+.desc{
+    position: absolute;
+    background-color: white;
+    padding: 0.5rem 2.5rem;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    color: black;
+    font-size: 3.5rem;
+    font-weight: 600;
+    /* transform: translateY(-50%) ; */
+}
+
+h1{
+    position: absolute;
+    top: 5rem;
+     font-size: 10rem;      /*all these values will be provided by designers and developers needs to develop it */
+    letter-spacing: 4px;   /*no need to think of such values*/
+    color: white;
+    text-shadow: 0 0 10px rgba(0,0,0,0.3)
+}
+
+
+section{
+background-color: black;
+color: white;
+padding: 5rem 0;
+}
+
+.secHeading{
+    font-size: 5rem;
+    padding: 0 10rem;
+}
+
+.text{
+    font-size: 1.5rem;
+    padding:0 10 rem;
+    margin:5rem 0
+}
+.bg{
+    position: relative;
+    width: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    height: 500px;
+}
+
+.bg1{
+    background-image: url(sport-1.jpg);
+}
+
+.bg2{
+    background-image: url(sport-2.jpg);
+}
+
+.bg3{
+    background-image: url(sport-3.jpg);
+}
